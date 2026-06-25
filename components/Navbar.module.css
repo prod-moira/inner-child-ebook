@@ -41,7 +41,7 @@
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  padding: var(--space-sm) var(--space-lg);
+  padding: var(--space-sm) var(--space-sm);
   font-family: var(--font-body);
   font-size: var(--font-size-sm);
   font-weight: 500;
@@ -54,6 +54,16 @@
 }
 
 .cta:hover {
-  background: #ffffff;
-  color: #1c525c;
+  background: #1c525c;
+  color: #ffffff;
+}
+
+@media (max-width: 768px){
+  .inner {
+    justify-content: center;
+  }
+
+  .cta {
+    display: none;
+  }
 }

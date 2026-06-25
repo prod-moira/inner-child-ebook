@@ -50,6 +50,7 @@
 .hero {
   composes: section;
   padding-block: var(--space-4xl) var(--section-padding-y);
+  height: 100vh;
 }
 
 .heroInner {
@@ -68,13 +69,54 @@
   border-radius: var(--radius-md);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
   object-fit: cover;
+  height: 260px;
+}
+
+  .heroHighlight {
+    font-weight: var(--font-weight-normal);
+    font-size: 30px;
+  }
+
+.heroCoverWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.heroBlobPink {
+  position: absolute;
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #D5905E);
+  opacity: 0.35;
+  top: -40px;
+  left: -60px;
+  filter: blur(24px);
+  z-index: -1;
+}
+
+.heroBlobTeal {
+  position: absolute;
+  width: 220px;
+  height: 260px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #D5905E);
+  opacity: 0.35;
+  bottom: -30px;
+  right: -60px;
+  filter: blur(20px);
+  z-index: -1;
 }
 
 .heroText {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: var(--space-xl);
+  font-size: var(--font-size-sm);
+  gap: var(--space-md);
 }
 
 @media (min-width: 768px) {
@@ -83,6 +125,7 @@
     text-align: left;
     max-width: var(--max-width);
     align-items: center;
+    gap: var(--space-xl);
   }
 
   .heroText {
@@ -91,13 +134,19 @@
   }
 
   .heroHighlight {
-    font-weight: var(--font-weight-bold);
-    font-size: larger;
+    font-weight: var(--font-weight-normal);
+    font-size: 60px;
+  }
+
+  .heroText {
+    font-size: var(--font-size-md);
+    gap: var(--space-xl);
   }
 
   .heroCover {
     max-width: 280px;
     flex-shrink: 0;
+    height: auto;
   }
 }
 
@@ -106,14 +155,14 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: var(--space-md) var(--space-xl);
+  padding: var(--space-sm) var(--space-xl);
   background: var(--color-accent);
   color: #fff;
-  font-family: var(--font-body);
+  font-family: var(--font-heading);
   font-size: var(--font-size-base);
   font-weight: 500;
   border: none;
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-xl);
   cursor: pointer;
   text-decoration: none;
   transition: background var(--transition-base);

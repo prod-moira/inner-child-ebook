@@ -19,6 +19,9 @@ export default function Home() {
       {/* Hero */}
       <section className={styles.hero}>
         <div className={styles.heroInner}>
+        <div className={styles.heroCoverWrapper}>
+          <div className={styles.heroBlobPink} />
+          <div className={styles.heroBlobTeal} />
           <Image
             src="/assets/bookcover.jpg"
             alt={EBOOK.title}
@@ -27,9 +30,10 @@ export default function Home() {
             className={styles.heroCover}
             priority
           />
+        </div>
           <div className={styles.heroText}>
             <h1 className={styles.heroTitle}>
-              <span className={styles.heroHighlight}>{EBOOK.title}</span>
+              <span className={styles.heroHighlight}>{EBOOK.tagline}</span>
             </h1>
             <p className={styles.heroSubtitle}>{EBOOK.valueProposition}</p>
             <Link href="/order" className={styles.btnPrimary}>
@@ -58,9 +62,9 @@ export default function Home() {
       </section>
 
       {/* About the Author */}
-      <section className={styles.sectionMuted}>
+      <section id="author" className={styles.sectionMuted}>
         <div className={styles.container}>
-          <p className={styles.sectionLabel}>About the Author</p>
+          {/* <p className={styles.sectionLabel}>About the Author</p> */}
           <div className={styles.authorLayout}>
             <div className={styles.avatar} aria-hidden="true">
               {AUTHOR.name

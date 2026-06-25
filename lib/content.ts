@@ -1,6 +1,6 @@
 export const EBOOK = {
   title: "My Kid Found my Inner Child",
-  tagline: "A gentle guide to reconnecting with the child within.",
+  tagline: "Heal your past, nurture their future.",
   valueProposition:
     "Learn practical tools to heal old wounds, nurture self-compassion, and build a kinder relationship with yourself.",
   price: 499,

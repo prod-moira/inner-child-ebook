@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { EBOOK } from "@/lib/content";
 import styles from "./Navbar.module.css";
+import { User } from "lucide-react";
 
 export default function Navbar() {
   return (
@@ -9,8 +10,8 @@ export default function Navbar() {
         <Link href="/" className={styles.title}>
           {EBOOK.title}
         </Link>
-        <Link href="/order" className={styles.cta}>
-          About the Author
+        <Link href="#author" className={styles.cta}>
+          <User/>
         </Link>
       </div>
     </header>
