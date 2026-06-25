@@ -18,6 +18,9 @@ export const metadata: Metadata = {
   title: "My Kid Found my Inner Child — Ebook",
   description:
     "A gentle guide to reconnecting with your inner child and building lasting emotional healing.",
+  icons: {
+    icon: "/favicon.png"
+  }
 };
 
 export default function RootLayout({

@@ -42,8 +42,8 @@ export const WHATS_INSIDE = [
 ] as const;
 
 export const AUTHOR = {
-  name: "Maria Santos",
-  bio: "Maria is a licensed counselor with over a decade of experience helping adults reconnect with their inner child. Her work blends evidence-based therapy with compassionate, accessible guidance for everyday healing.",
+  name: "Boggs Burbos",
+  bio: "Boggs 'Kuya Boggs' Burbos is a prominent Filipino Christian lay preacher, leadership coach, and motivational speaker. He is most widely recognized for his extensive leadership within The Feast, a global Catholic prayer community established by the Light of Jesus Family.",
 } as const;
 
 export const TESTIMONIALS = [
@@ -83,11 +83,6 @@ export const FAQ_ITEMS = [
       "Once your payment is confirmed, we'll email you a download link for the PDF and any bonus materials within 24 hours.",
   },
   {
-    question: "What is your refund policy?",
-    answer:
-      "Due to the digital nature of this product, all sales are final. If you experience any issues with your download, contact us and we'll make it right.",
-  },
-  {
     question: "How long does order approval take?",
     answer:
       "Orders are typically reviewed within 1–2 business days. You'll receive an email once your payment has been verified.",
@@ -96,10 +91,5 @@ export const FAQ_ITEMS = [
     question: "Can I read this on my phone or tablet?",
     answer:
       "Yes. The ebook is delivered as a PDF that works on any device — phone, tablet, e-reader, or computer.",
-  },
-  {
-    question: "Is this a substitute for therapy?",
-    answer:
-      "This ebook is a self-help resource and is not a replacement for professional mental health care. If you're in crisis, please reach out to a qualified provider.",
   },
 ] as const;

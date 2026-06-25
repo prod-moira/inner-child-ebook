@@ -61,24 +61,28 @@ export default function Home() {
         </div>
       </section>
 
-      {/* About the Author */}
-      <section id="author" className={styles.sectionMuted}>
-        <div className={styles.container}>
-          {/* <p className={styles.sectionLabel}>About the Author</p> */}
-          <div className={styles.authorLayout}>
-            <div className={styles.avatar} aria-hidden="true">
-              {AUTHOR.name
-                .split(" ")
-                .map((n) => n[0])
-                .join("")}
-            </div>
-            <div>
-              <h2 className={styles.authorName}>{AUTHOR.name}</h2>
-              <p className={styles.authorBio}>{AUTHOR.bio}</p>
-            </div>
+    {/* About the Author */}
+    <section id="author" className={styles.sectionMuted}>
+      <div className={styles.container}>
+        <div className={styles.authorLayout}>
+          <div>
+            <h2 className={styles.authorName}>{AUTHOR.name}</h2>
+            <p className={styles.authorBio}>{AUTHOR.bio}</p>
+          </div>
+          <div className={styles.authorImageWrapper}>
+            <div className={styles.authorBlobGrey1} />
+            <div className={styles.authorBlobGrey2} />
+            <Image
+              src="/assets/author.png"
+              alt={AUTHOR.name}
+              width={260}
+              height={320}
+              className={styles.authorImage}
+            />
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
       {/* Testimonials */}
       <section className={styles.section}>
