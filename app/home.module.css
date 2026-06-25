@@ -90,6 +90,11 @@
     flex: 1;
   }
 
+  .heroHighlight {
+    font-weight: var(--font-weight-bold);
+    font-size: larger;
+  }
+
   .heroCover {
     max-width: 280px;
     flex-shrink: 0;

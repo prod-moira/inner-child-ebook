@@ -19,6 +19,14 @@ export default function Home() {
       {/* Hero */}
       <section className={styles.hero}>
         <div className={styles.heroInner}>
+          <Image
+            src="/assets/bookcover.jpg"
+            alt={EBOOK.title}
+            width={280}
+            height={400}
+            className={styles.heroCover}
+            priority
+          />
           <div className={styles.heroText}>
             <h1 className={styles.heroTitle}>
               <span className={styles.heroHighlight}>{EBOOK.title}</span>
@@ -28,14 +36,6 @@ export default function Home() {
               Buy Now
             </Link>
           </div>
-            <Image
-            src="/assets/bookcover.jpg"
-            alt={EBOOK.title}
-            width={280}
-            height={400}
-            className={styles.heroCover}
-            priority
-          />
         </div>
       </section>
 

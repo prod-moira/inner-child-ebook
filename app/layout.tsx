@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Roboto_Serif, Inter } from "next/font/google";
+import Navbar from "@/components/Navbar";
 import "./globals.css";
 
 const robotoSerif = Roboto_Serif({
@@ -29,7 +30,10 @@ export default function RootLayout({
       lang="en"
       className={`${robotoSerif.variable} ${inter.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <Navbar />
+        {children}
+      </body>
     </html>
   );
 }
