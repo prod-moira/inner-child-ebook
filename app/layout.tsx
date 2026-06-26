@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Roboto_Serif, Inter } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import "./globals.css";
+import { headers } from "next/headers";
 
 const robotoSerif = Roboto_Serif({
   variable: "--font-roboto-serif",
@@ -23,18 +24,18 @@ export const metadata: Metadata = {
   }
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
+export default async function RootLayout({ children,
+}: {
   children: React.ReactNode;
-}>) {
+}) {
+  const headersList = await headers();
+  const pathname = headersList.get("x-invoke-path") ?? "";
+  const isAdmin = pathname.startsWith("/admin");
+
   return (
-    <html
-      lang="en"
-      className={`${robotoSerif.variable} ${inter.variable} h-full antialiased`}
-    >
+    <html lang="en" className={`${robotoSerif.variable} ${inter.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col">
-        <Navbar />
+        {!isAdmin && <Navbar />}
         {children}
       </body>
     </html>
