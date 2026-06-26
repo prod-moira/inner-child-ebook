@@ -49,8 +49,8 @@
 /* Hero */
 .hero {
   composes: section;
-  padding-block: var(--space-4xl) var(--section-padding-y);
-  height: 100vh;
+  padding-block: var(--space-xl) var(--section-padding-y);
+  padding-top: 25px;
 }
 
 .heroInner {
@@ -64,12 +64,12 @@
 }
 
 .heroCover {
-  width: 100%;
+  width: 80%;
   max-width: 220px;
   border-radius: var(--radius-md);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
   object-fit: cover;
-  height: 260px;
+  height: 280px;
 }
 
   .heroHighlight {
@@ -120,6 +120,11 @@
 }
 
 @media (min-width: 768px) {
+  .hero {
+    padding-block: var(--space-4xl) 5.5rem;
+    
+  }
+
   .heroInner {
     flex-direction: row;
     text-align: left;
@@ -144,9 +149,10 @@
   }
 
   .heroCover {
+    width: 100%;
     max-width: 280px;
-    flex-shrink: 0;
     height: auto;
+    flex-shrink: 0;
   }
 }
 
