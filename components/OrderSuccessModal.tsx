@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
-import styles from "@/app/home.module.css";
+import styles from "@/app/(public)/home.module.css";
 
 export default function OrderSuccessModal() {
   const searchParams = useSearchParams();

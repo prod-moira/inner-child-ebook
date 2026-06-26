@@ -42,8 +42,9 @@ export default function LoginForm() {
     <div className={styles.loginWrapper}>
       <div className={styles.loginCard}>
         <h1 className={styles.loginTitle}>Admin Login</h1>
-        {/* <p className={styles.loginSubtitle}>
-        </p> */}
+        <p className={styles.loginSubtitle}>
+          Please sign in using your credentials.
+        </p>
 
         <form onSubmit={handleSubmit} noValidate>
 
@@ -76,7 +77,7 @@ export default function LoginForm() {
               onChange={(e) => setPassword(e.target.value)}
             />
           </div>
-          
+
           {error && <p className={styles.errorMessage}>{error}</p>}
 
           <button

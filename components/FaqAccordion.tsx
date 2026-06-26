@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import styles from "../app/home.module.css";
+import styles from "@/app/(public)/home.module.css";
 
 type FaqItem = {
   question: string;
