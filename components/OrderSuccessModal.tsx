@@ -32,11 +32,10 @@ export default function OrderSuccessModal() {
         aria-labelledby="order-modal-title"
       >
         <h2 id="order-modal-title" className={styles.modalTitle}>
-          Order received
+          Order placed successfully!
         </h2>
         <p className={styles.modalText}>
-          Your order is pending approval — we&apos;ll email you once it&apos;s
-          confirmed.
+          Once your payment is verified, your copy will be sent to your email.
         </p>
         <button type="button" className={styles.modalClose} onClick={handleClose}>
           Got it

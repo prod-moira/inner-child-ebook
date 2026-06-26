@@ -500,6 +500,7 @@
 }
 
 /* Modal */
+
 .modalOverlay {
   position: fixed;
   inset: 0;
@@ -509,6 +510,7 @@
   justify-content: center;
   padding: var(--space-lg);
   z-index: 50;
+  text-align: center;
 }
 
 .modal {
