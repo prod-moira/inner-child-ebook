@@ -37,7 +37,7 @@ export default function Home() {
             </h1>
             <p className={styles.heroSubtitle}>{EBOOK.valueProposition}</p>
             <Link href="/order" className={styles.btnPrimary}>
-              Buy Now
+              Avail Now
             </Link>
           </div>
         </div>
@@ -126,7 +126,7 @@ export default function Home() {
               ))}
             </ul>
             <Link href="/order" className={styles.btnPrimary}>
-              Buy Now
+              Avail Now
             </Link>
           </div>
         </div>

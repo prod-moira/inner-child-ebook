@@ -85,7 +85,7 @@
   background: var(--color-bg-elevated);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-xl);
-  padding: var(--space-2xl);
+  padding: var(--space-xl);
 }
 
 .formGroup {
@@ -103,7 +103,7 @@
 
 .input {
   width: 100%;
-  padding: var(--space-md);
+  padding: var(--space-sm) var(--space-md);
   font-family: var(--font-body);
   font-size: var(--font-size-base);
   color: var(--color-text);
@@ -136,14 +136,15 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  padding: var(--space-md) var(--space-xl);
+  padding: var(--space-md) var(--space-md);
+  margin-top: 20px;
   background: var(--color-accent);
   color: #fff;
-  font-family: var(--font-body);
+  font-family: var(--font-heading);
   font-size: var(--font-size-base);
   font-weight: 500;
   border: none;
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-xl);
   cursor: pointer;
   transition: background var(--transition-base);
 }
@@ -230,6 +231,21 @@
   border: 1px dashed var(--color-border);
   border-radius: var(--radius-md);
   cursor: pointer;
+}
+
+.fileInput::file-selector-button {
+  padding: 0.5rem 1rem;
+  margin-right: 1rem;
+  border: none;
+  border-radius: var(--radius-sm);
+  background: var(--color-accent);
+  color: white;
+  cursor: pointer;
+  font-family: var(--font-heading);
+}
+
+.fileInput::file-selector-button:hover {
+  background: var(--color-accent-hover);
 }
 
 .fileInput:hover {

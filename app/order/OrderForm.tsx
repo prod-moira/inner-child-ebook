@@ -114,9 +114,9 @@ export default function OrderForm() {
     <div className={styles.page}>
       <div className={styles.container}>
         <header className={styles.header}>
-          <h1 className={styles.title}>Order {EBOOK.title}</h1>
+          <h1 className={styles.title}>For the child within</h1>
           <p className={styles.subtitle}>
-            Complete the form below to purchase your copy.
+            Your copy will be ready to download after checkout.
           </p>
         </header>
 
