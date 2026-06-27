@@ -4,6 +4,8 @@ import styles from "../admin.module.css";
 import OrdersTable from "./OrdersTable";
 import LogoutButton from "./LogoutButton";
 
+export const dynamic = "force-dynamic";
+
 export default async function AdminOrdersPage() {
   const supabase = createSupabaseServerClient();
 
