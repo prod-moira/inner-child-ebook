@@ -1,5 +1,7 @@
 import { getAuthenticatedUser } from "@/lib/supabase/server-auth";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
+import { sendOrderEmail } from "@/lib/email/sendOrderEmail";
+import { Order } from "@/lib/types/order";
 
 type RouteContext = {
   params: Promise<{ id: string }>;
@@ -49,11 +51,17 @@ export async function PATCH(request: Request, context: RouteContext) {
     .from("orders")
     .update({ status: body.status })
     .eq("id", id)
-    .select("id")
+    .select("*")
     .single();
 
   if (error || !data) {
     return Response.json({ error: "Failed to update order" }, { status: 500 });
+  }
+
+  try {
+    await sendOrderEmail(data as Order, body.status);
+  } catch (emailError) {
+    console.error("Failed to send order status email:", emailError);
   }
 
   return Response.json({ success: true }, { status: 200 });
