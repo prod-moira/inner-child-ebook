@@ -22,14 +22,15 @@ export default function Home() {
         <div className={styles.heroCoverWrapper}>
           <div className={styles.heroBlobPink} />
           <div className={styles.heroBlobTeal} />
-          <Image
-            src="/assets/bookcover.jpg"
-            alt={EBOOK.title}
-            width={280}
-            height={400}
-            className={styles.heroCover}
-            priority
-          />
+        <Image
+          src="/assets/bookcover.jpg"
+          alt={EBOOK.title}
+          width={280}
+          height={400}
+          className={styles.heroCover}
+          priority
+          sizes="(max-width: 768px) 60vw, (max-width: 1200px) 35vw, 220px"
+        />
         </div>
           <div className={styles.heroText}>
             <h1 className={styles.heroTitle}>

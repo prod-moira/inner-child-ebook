@@ -72,6 +72,10 @@
   --transition-base: 200ms ease;
 }
 
+:root {
+  --navbar-height: 64px; /* whatever your navbar is */
+}
+
 @theme inline {
   --color-background: var(--color-bg);
   --color-foreground: var(--color-text);
