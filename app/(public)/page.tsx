@@ -35,7 +35,7 @@ export default function Home() {
         </div>
           <div className={styles.heroText}>
             <h1 className={styles.heroTitle}>
-              <span className={styles.heroHighlight}>{EBOOK.tagline}</span>
+              <span className={styles.heroHighlight}>Heal your <i>past</i>, nurture their <span style={{ borderBottom: "2px solid #1D535F" }}>future</span>.</span>
             </h1>
             <p className={styles.heroSubtitle}>{EBOOK.valueProposition}</p>
             <Link href="/order" className={styles.btnPrimary}>
@@ -149,6 +149,10 @@ export default function Home() {
           <p className={styles.footerCopyright}>{EBOOK.copyright}</p>
         </footer>
       </FadeIn>
+
+      <Suspense fallback={null}>
+        <OrderSuccessModal />
+      </Suspense>
     </div>
   );
 }

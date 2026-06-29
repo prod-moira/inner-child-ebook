@@ -8,7 +8,7 @@ export default function Navbar() {
     <header className={styles.navbar}>
       <div className={styles.inner}>
         <Link href="/" className={styles.title}>
-          {EBOOK.title}
+          mkfmic
         </Link>
         <Link href="#author" className={styles.cta}>
           <User/>

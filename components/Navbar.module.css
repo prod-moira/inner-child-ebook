@@ -2,8 +2,8 @@
   position: sticky;
   top: 0;
   z-index: 100;
-  /* background: linear-gradient(to bottom, #1D535F, #1A2D35); */
-  background: linear-gradient(to bottom, #ededed, #f5f2ee,  #ededed);
+  background: linear-gradient(to bottom, #1A2D35, #1D535F);
+  /* background: linear-gradient(to bottom, #ededed, #f5f2ee,  #ededed); */
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
@@ -21,8 +21,8 @@
 .title {
   font-family: var(--font-heading);
   font-size: var(--font-size-base);
-  font-weight: var(--font-weight-normal);
-  color: black;
+  font-weight: var(--font-weight-bold);
+  color: white;
   text-decoration: none;
   line-height: var(--line-height-tight);
   white-space: nowrap;
@@ -45,9 +45,11 @@
   font-family: var(--font-body);
   font-size: var(--font-size-sm);
   font-weight: 500;
-  color: #1c525c;
+  /* color: #1c525c; */
+  color: white;
   background: transparent;
-  border: 1.5px solid #1c525c;
+  /* border: 1.5px solid #1c525c; */
+  border: 1.5px solid white;
   border-radius: var(--radius-full);
   text-decoration: none;
   transition: background var(--transition-base), color var(--transition-base);
