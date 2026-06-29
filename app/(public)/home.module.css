@@ -48,7 +48,7 @@
 
 /* ── Hero ── */
 .hero {
-  min-height: calc(100dvh - var(--navbar-height));
+  min-height: calc(95vh - var(--navbar-height));
   display: flex;
   align-items: center;
   padding-block: var(--space-xl);
@@ -79,6 +79,41 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  animation: fadeDown 0.7s ease 0.15s forwards;
+  opacity: 0;
+}
+
+/* Animation */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.heroCoverWrapper {
+  opacity: 0;
+  animation: fadeDown 0.7s ease 0.15s forwards;
+}
+
+.heroText {
+  opacity: 0;
+  animation: fadeUp 0.7s ease forwards;
 }
 
 @media (min-width: 768px) {
@@ -106,7 +141,7 @@
 
   .heroCover {
     width: 86%;
-    height: 100%;
+    /* height: 100%; */
     object-fit: contain;
   }
 }

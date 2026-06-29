@@ -4,6 +4,7 @@ import styles from "./home.module.css";
 import FaqAccordion from "@/components/FaqAccordion";
 import OrderSuccessModal from "@/components/OrderSuccessModal";
 import Image from "next/image";
+import FadeIn from "@/components/FadeIn";
 import {
   EBOOK,
   WHATS_INSIDE,
@@ -23,7 +24,7 @@ export default function Home() {
           <div className={styles.heroBlobPink} />
           <div className={styles.heroBlobTeal} />
         <Image
-          src="/assets/bookcover.jpg"
+          src="/assets/finalcover.png"
           alt={EBOOK.title}
           width={280}
           height={400}
@@ -47,62 +48,59 @@ export default function Home() {
       {/* What's Inside */}
       <section className={styles.section}>
         <div className={styles.container}>
-          <p className={styles.sectionLabel}>What&apos;s Inside</p>
-          <h2 className={styles.sectionTitle}>
-            Everything you need to begin healing
-          </h2>
+          <FadeIn>
+            <p className={styles.sectionLabel}>What&apos;s Inside</p>
+            <h2 className={styles.sectionTitle}>Everything you need to begin healing</h2>
+          </FadeIn>
           <div className={styles.cardsGrid}>
-            {WHATS_INSIDE.map((item) => (
-              <article key={item.title} className={styles.card}>
-                <h3 className={styles.cardTitle}>{item.title}</h3>
-                <p className={styles.cardDescription}>{item.description}</p>
-              </article>
+            {WHATS_INSIDE.map((item, i) => (
+              <FadeIn key={item.title} direction="up" delay={i * 100}>
+                <article className={styles.card}>
+                  <h3 className={styles.cardTitle}>{item.title}</h3>
+                  <p className={styles.cardDescription}>{item.description}</p>
+                </article>
+              </FadeIn>
             ))}
           </div>
         </div>
       </section>
 
-    {/* About the Author */}
-    <section id="author" className={styles.sectionMuted}>
-      <div className={styles.container}>
-        <div className={styles.authorLayout}>
-          <div>
-            <h2 className={styles.authorName}>{AUTHOR.name}</h2>
-            <p className={styles.authorBio}>{AUTHOR.bio}</p>
-          </div>
-          <div className={styles.authorImageWrapper}>
-            <div className={styles.authorBlobGrey1} />
-            <div className={styles.authorBlobGrey2} />
-            <Image
-              src="/assets/author.png"
-              alt={AUTHOR.name}
-              width={260}
-              height={320}
-              className={styles.authorImage}
-            />
+      {/* About the Author */}
+      <section id="author" className={styles.sectionMuted}>
+        <div className={styles.container}>
+          <div className={styles.authorLayout}>
+            <FadeIn direction="left">
+              <div>
+                <h2 className={styles.authorName}>{AUTHOR.name}</h2>
+                <p className={styles.authorBio}>{AUTHOR.bio}</p>
+              </div>
+            </FadeIn>
+            <FadeIn direction="right">
+              <div className={styles.authorImageWrapper}>
+                <div className={styles.authorBlobGrey1} />
+                <div className={styles.authorBlobGrey2} />
+                <Image src="/assets/author.png" alt={AUTHOR.name} width={260} height={320} className={styles.authorImage} />
+              </div>
+            </FadeIn>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
       {/* Testimonials */}
       <section className={styles.section}>
         <div className={styles.container}>
-          <p className={styles.sectionLabel}>Testimonials</p>
-          <h2 className={styles.sectionTitle}>What readers are saying</h2>
+          <FadeIn>
+            <p className={styles.sectionLabel}>Testimonials</p>
+            <h2 className={styles.sectionTitle}>What readers are saying</h2>
+          </FadeIn>
           <div className={styles.testimonialsGrid}>
-            {TESTIMONIALS.map((testimonial) => (
-              <blockquote
-                key={testimonial.name}
-                className={styles.testimonialCard}
-              >
-                <p className={styles.testimonialQuote}>
-                  &ldquo;{testimonial.quote}&rdquo;
-                </p>
-                <footer className={styles.testimonialName}>
-                  — {testimonial.name}
-                </footer>
-              </blockquote>
+            {TESTIMONIALS.map((testimonial, i) => (
+              <FadeIn key={testimonial.name} direction="up" delay={i * 120}>
+                <blockquote className={styles.testimonialCard}>
+                  <p className={styles.testimonialQuote}>&ldquo;{testimonial.quote}&rdquo;</p>
+                  <footer className={styles.testimonialName}>— {testimonial.name}</footer>
+                </blockquote>
+              </FadeIn>
             ))}
           </div>
         </div>
@@ -111,47 +109,46 @@ export default function Home() {
       {/* Pricing */}
       <section className={styles.sectionMuted}>
         <div className={styles.container}>
-          <p className={styles.sectionLabel}>Pricing</p>
-          <h2 className={styles.sectionTitle}>Start your healing journey</h2>
-          <div className={styles.pricingCard}>
-            <p className={styles.priceAmount}>
-              {EBOOK.currency}
-              {EBOOK.price}
-            </p>
-            <p className={styles.priceLabel}>One-time purchase</p>
-            <ul className={styles.includesList}>
-              {PRICING_INCLUDES.map((item) => (
-                <li key={item} className={styles.includesItem}>
-                  {item}
-                </li>
-              ))}
-            </ul>
-            <Link href="/order" className={styles.btnPrimary}>
-              Avail Now
-            </Link>
-          </div>
+          <FadeIn>
+            <p className={styles.sectionLabel}>Pricing</p>
+            <h2 className={styles.sectionTitle}>Start your healing journey</h2>
+          </FadeIn>
+          <FadeIn direction="up" delay={100}>
+            <div className={styles.pricingCard}>
+              <p className={styles.priceAmount}>{EBOOK.currency}{EBOOK.price}</p>
+              <p className={styles.priceLabel}>One-time purchase</p>
+              <ul className={styles.includesList}>
+                {PRICING_INCLUDES.map((item) => (
+                  <li key={item} className={styles.includesItem}>{item}</li>
+                ))}
+              </ul>
+              <Link href="/order" className={styles.btnPrimary}>Avail Now</Link>
+            </div>
+          </FadeIn>
         </div>
       </section>
 
       {/* FAQ */}
       <section className={styles.section}>
         <div className={styles.container}>
-          <p className={styles.sectionLabel}>FAQ</p>
-          <h2 className={styles.sectionTitle}>Common questions</h2>
-          <FaqAccordion items={FAQ_ITEMS} />
+          <FadeIn>
+            <p className={styles.sectionLabel}>FAQ</p>
+            <h2 className={styles.sectionTitle}>Common questions</h2>
+          </FadeIn>
+          <FadeIn direction="up" delay={100}>
+            <FaqAccordion items={FAQ_ITEMS} />
+          </FadeIn>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className={styles.footer}>
-        <p className={styles.footerTitle}>{EBOOK.title}</p>
-        <p className={styles.footerTagline}>{EBOOK.tagline}</p>
-        <p className={styles.footerCopyright}>{EBOOK.copyright}</p>
-      </footer>
-
-      <Suspense fallback={null}>
-        <OrderSuccessModal />
-      </Suspense>
+      <FadeIn>
+        <footer className={styles.footer}>
+          <p className={styles.footerTitle}>{EBOOK.title}</p>
+          <p className={styles.footerTagline}>{EBOOK.tagline}</p>
+          <p className={styles.footerCopyright}>{EBOOK.copyright}</p>
+        </footer>
+      </FadeIn>
     </div>
   );
 }

@@ -14,8 +14,8 @@
   --color-accent: #c96442;
   --color-accent-hover: #b5563a;
 
-  /* --color-accent: #1A2D35;
-  --color-accent-hover: #1D535F; */
+  /* --color-accent-hover: #1A2D35;
+  --color-accent: #1D535F; */
 
   --color-accent-muted: #f5ebe6;
   --color-error: #c0392b;
@@ -88,8 +88,17 @@
   box-sizing: border-box;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 html {
-  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+html {
+  scroll-behavior: stable;
 }
 
 body {

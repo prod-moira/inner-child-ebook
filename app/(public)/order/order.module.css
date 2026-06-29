@@ -136,7 +136,7 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  padding: var(--space-md) var(--space-md);
+  padding: var(--space-sm) var(--space-sm);
   margin-top: 20px;
   background: var(--color-accent);
   color: #fff;
@@ -144,7 +144,7 @@
   font-size: var(--font-size-base);
   font-weight: 500;
   border: none;
-  border-radius: var(--radius-xl);
+  border-radius: var(--radius-md);
   cursor: pointer;
   transition: background var(--transition-base);
 }
@@ -276,4 +276,46 @@
 
 .backLink:hover {
   color: var(--color-text);
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+  .container {
+    padding-block: var(--space-xl);
+  }
+
+  .header {
+    margin-bottom: var(--space-lg);
+  }
+
+  .title {
+    font-size: var(--font-size-2xl);
+  }
+
+  .steps {
+    margin-bottom: var(--space-lg);
+  }
+
+  .formCard {
+    padding: var(--space-lg);
+  }
+
+  .formGroup {
+    margin-bottom: var(--space-md);
+  }
+
+  .qrWrapper {
+    padding: var(--space-md);
+    margin-bottom: var(--space-md);
+  }
+
+  .qrImage {
+    width: 9rem;
+    height: 9rem;
+  }
+
+  .gcashLabel {
+    margin-bottom: var(--space-lg);
+  }
 }
