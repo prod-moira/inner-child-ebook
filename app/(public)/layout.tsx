@@ -1,4 +1,5 @@
 import Navbar from "@/components/Navbar";
+import ScrollRestorationFix from "@/components/ScrollRestorationFix";
 
 export default function PublicLayout({
   children,
@@ -7,6 +8,7 @@ export default function PublicLayout({
 }) {
   return (
     <>
+      {/* <ScrollRestorationFix /> */}
       <Navbar />
       {children}
     </>

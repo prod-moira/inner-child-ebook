@@ -48,7 +48,7 @@
 
 /* ── Hero ── */
 .hero {
-  min-height: calc(95vh - var(--navbar-height));
+  min-height: calc(95svh - var(--navbar-height));
   display: flex;
   align-items: center;
   padding-block: var(--space-xl);

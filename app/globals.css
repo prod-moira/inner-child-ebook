@@ -94,12 +94,11 @@
 }
 
 html {
+  scroll-behavior: auto;
+  overflow-anchor: none;
+  scrollbar-gutter: stable;
   scrollbar-width: none;
   -ms-overflow-style: none;
-}
-
-html {
-  scroll-behavior: stable;
 }
 
 body {
@@ -110,6 +109,7 @@ body {
   line-height: var(--line-height-normal);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-anchor: none;
 }
 
 h1,
