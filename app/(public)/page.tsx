@@ -64,10 +64,11 @@ export default function Home() {
             ))}
           </div>
         </div>
+        <div id="author"></div>
       </section>
 
       {/* About the Author */}
-      <section id="author" className={styles.sectionMuted}>
+      <section className={styles.sectionMuted}>
         <div className={styles.container}>
           <div className={styles.authorLayout}>
             <FadeIn direction="left" className={styles.authorTextBlock}>
