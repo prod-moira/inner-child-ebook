@@ -89,7 +89,7 @@ export default function Home() {
               </div>
             </FadeIn>
 
-            <div className={styles.authorSocials}>
+            <FadeIn direction="up" delay={200} className={styles.authorSocials}>
               <a href={AUTHOR.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook" className={styles.authorSocialLink}>
                 <FaFacebook className={styles.authorSocialIcon} />
               </a>
@@ -99,7 +99,7 @@ export default function Home() {
               <a href={AUTHOR.website} target="_blank" rel="noopener noreferrer" aria-label="Website" className={styles.authorSocialLink}>
                 <FaLink className={styles.authorSocialIcon} />
               </a>
-            </div>
+            </FadeIn>
           </div>
         </div>
       </section>

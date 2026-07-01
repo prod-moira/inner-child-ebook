@@ -316,7 +316,7 @@
 .authorName {
   font-family: var(--font-heading);
   font-size: var(--font-size-2xl);
-  font-weight: var(--font-weight-normal);
+  font-weight: var(--font-weight-bold);
   color: var(--color-text);
   margin-bottom: var(--space-md);
 }
