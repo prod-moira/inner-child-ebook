@@ -23,7 +23,7 @@ export async function sendOrderEmail(order: Order, status: "approved" | "rejecte
   let htmlContent = "";
 
   if (status === "approved") {
-    subject = "Your order has been approved!";
+    subject = "📚 Your order has been approved!";
 
     // Create a supabase client with service role
     const supabase = createSupabaseServerClient();
@@ -97,7 +97,7 @@ export async function sendOrderEmail(order: Order, status: "approved" | "rejecte
     `;
 
   } else {
-    subject = "Update on your order";
+    subject = "🧾 Update on your order";
 
     htmlContent = `
     <!DOCTYPE html>

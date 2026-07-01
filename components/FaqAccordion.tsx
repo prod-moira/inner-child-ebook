@@ -45,7 +45,19 @@ export default function FaqAccordion({ items }: FaqAccordionProps) {
                 />
               </svg>
             </button>
-            {isOpen && <p className={styles.faqAnswer}>{item.answer}</p>}
+            <div
+              className={
+                isOpen ? styles.faqAnswerWrapperOpen : styles.faqAnswerWrapper
+              }
+            >
+              <div className={styles.faqAnswerInner}>
+                <p
+                  className={isOpen ? styles.faqAnswerOpen : styles.faqAnswer}
+                >
+                  {item.answer}
+                </p>
+              </div>
+            </div>
           </div>
         );
       })}
