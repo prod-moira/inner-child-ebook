@@ -124,38 +124,38 @@ export default function Home() {
         </div>
       </section>
 
-  {/* Pricing */}
-  <section className={styles.sectionMuted}>
-    <div className={styles.container}>
-      <FadeIn>
-        <p className={styles.sectionLabel}>Pricing</p>
-        <h2 className={styles.sectionTitle}>Start your healing journey</h2>
-      </FadeIn>
-      <FadeIn direction="up" delay={100}>
-        <div className={styles.pricingLayout}>
-          <div className={styles.pricingImageWrapper}>
-            <Image
-              src="/assets/books.png"
-              alt="My Kid Found my Inner Child ebook"
-              width={400}
-              height={400}
-              className={styles.pricingImage}
-            />
+    {/* Pricing */}
+    <section className={styles.sectionMuted}>
+      <div className={styles.container}>
+        <FadeIn>
+          <p className={styles.sectionLabel}>Pricing</p>
+          <h2 className={styles.sectionTitle}>Start your healing journey</h2>
+        </FadeIn>
+        <FadeIn direction="up" delay={100}>
+          <div className={styles.pricingLayout}>
+            <div className={styles.pricingImageWrapper}>
+              <Image
+                src="/assets/books.png"
+                alt="My Kid Found my Inner Child ebook"
+                width={400}
+                height={400}
+                className={styles.pricingImage}
+              />
+            </div>
+            <div className={styles.pricingCard}>
+              <p className={styles.priceAmount}>{EBOOK.currency}{EBOOK.price}</p>
+              <p className={styles.priceLabel}>One-time purchase</p>
+              <ul className={styles.includesList}>
+                {PRICING_INCLUDES.map((item) => (
+                  <li key={item} className={styles.includesItem}>{item}</li>
+                ))}
+              </ul>
+              <Link href="/order" className={styles.btnPrimary}>Avail Now</Link>
+            </div>
           </div>
-          <div className={styles.pricingCard}>
-            <p className={styles.priceAmount}>{EBOOK.currency}{EBOOK.price}</p>
-            <p className={styles.priceLabel}>One-time purchase</p>
-            <ul className={styles.includesList}>
-              {PRICING_INCLUDES.map((item) => (
-                <li key={item} className={styles.includesItem}>{item}</li>
-              ))}
-            </ul>
-            <Link href="/order" className={styles.btnPrimary}>Avail Now</Link>
-          </div>
-        </div>
-      </FadeIn>
-    </div>
-  </section>
+        </FadeIn>
+      </div>
+    </section>
 
       {/* FAQ */}
       <section className={styles.section}>

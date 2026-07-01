@@ -528,7 +528,7 @@
 .priceAmount {
   font-family: var(--font-heading);
   font-size: var(--font-size-4xl);
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-normal);
   color: var(--color-text);
   margin-bottom: var(--space-xs);
 }
@@ -540,7 +540,7 @@
 }
 
 .priceLabel {
-  font-family: var(--font-body);
+  font-family: var(--font-heading);
   font-size: var(--font-size-sm);
   color: var(--color-text-muted);
   margin-bottom: var(--space-xl);
