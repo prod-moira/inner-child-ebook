@@ -68,10 +68,9 @@ export const TESTIMONIALS = [
 ] as const;
 
 export const PRICING_INCLUDES = [
-  "Full ebook (PDF, instant delivery)",
-  "Printable journaling worksheets",
-  "Guided meditation audio companion",
-  "Lifetime access to future updates",
+  "Full ebook in PDF & EPUB formats",
+  "Instant access after purchase",
+  "Read on phones, tablets, e-readers, and computers",
 ] as const;
 
 export const FAQ_ITEMS = [

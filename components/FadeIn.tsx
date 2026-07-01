@@ -7,10 +7,12 @@ export default function FadeIn({
   children,
   direction = "up",
   delay = 0,
+  className,
 }: {
   children: React.ReactNode;
   direction?: "up" | "down" | "left" | "right";
   delay?: number;
+  className?: string;
 }) {
   const ref = useRef<HTMLDivElement>(null);
 
@@ -34,7 +36,11 @@ export default function FadeIn({
   }, [delay]);
 
   return (
-    <div ref={ref} className={styles.fadeIn} data-direction={direction}>
+    <div
+      ref={ref}
+      className={className ? `${styles.fadeIn} ${className}` : styles.fadeIn}
+      data-direction={direction}
+    >
       {children}
     </div>
   );

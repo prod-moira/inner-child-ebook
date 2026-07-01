@@ -271,18 +271,25 @@
 
 /* ── Author ── */
 .authorLayout {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "text"
+    "image"
+    "socials";
   gap: var(--space-xl);
+  align-items: center;
   text-align: center;
 }
 
 @media (min-width: 768px) {
   .authorLayout {
-    flex-direction: row;
+    grid-template-columns: 1fr auto;
+    grid-template-areas:
+      "text image"
+      "socials image";
     text-align: left;
-    align-items: flex-start;
+    align-items: stretch;
     gap: var(--space-2xl);
   }
 }
@@ -302,6 +309,10 @@
   color: var(--color-text-subtle);
 }
 
+.authorTextBlock {
+  grid-area: text;
+}
+
 .authorName {
   font-family: var(--font-heading);
   font-size: var(--font-size-2xl);
@@ -318,29 +329,50 @@
   max-width: 40rem;
 }
 
+.authorImageBlock {
+  grid-area: image;
+}
+
+@media (min-width: 768px) {
+  .authorImageBlock {
+    height: 100%;
+  }
+}
+
 .authorImageWrapper {
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
+  width: 300px;
+  height: 320px;
+  margin-inline: auto;
+}
+
+@media (min-width: 768px) {
+  .authorImageWrapper {
+    height: 100%;
+    margin-inline: 0;
+  }
 }
 
 .authorImage {
-  position: relative;
-  z-index: 1;
-  width: 260px;
-  height: 320px;
   object-fit: cover;
   border-radius: var(--radius-md);
   transition: filter 0.4s ease;
 }
 
 .authorSocials {
+  grid-area: socials;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   gap: var(--space-sm);
   margin-top: var(--space-md);
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .authorSocials {
+    justify-content: flex-start;
+    margin-top: 0;
+  }
 }
 
 .authorSocialLink {
@@ -372,7 +404,7 @@
   width: 240px;
   height: 240px;
   border-radius: 50%;
-  background: radial-gradient(circle, #8d8d8d, transparent 70%);
+  background: radial-gradient(circle, white, transparent 70%);
   opacity: 0.4;
   top: -30px;
   left: -40px;
@@ -384,7 +416,7 @@
   width: 200px;
   height: 200px;
   border-radius: 50%;
-  background: radial-gradient(circle, #2d2d2d, transparent 70%);
+  background: radial-gradient(circle, white, transparent 70%);
   opacity: 0.3;
   bottom: -20px;
   right: -30px;

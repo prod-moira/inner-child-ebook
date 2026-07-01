@@ -65,60 +65,41 @@ export default function Home() {
           </div>
         </div>
       </section>
-      
+
       {/* About the Author */}
       <section id="author" className={styles.sectionMuted}>
         <div className={styles.container}>
           <div className={styles.authorLayout}>
-            <FadeIn direction="left">
-              <div>
-                <p className={styles.sectionLabel}>author</p>
-                <h2 className={styles.authorName}>{AUTHOR.name}</h2>
-                <p className={styles.authorBio}>{AUTHOR.bio}</p>
-                <div className={styles.authorSocials}>
-                  <a
-                    href={AUTHOR.facebook}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Facebook"
-                    className={styles.authorSocialLink}
-                  >
-                    <FaFacebook className={styles.authorSocialIcon} />
-                  </a>
-                  <a
-                    href={AUTHOR.instagram}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Instagram"
-                    className={styles.authorSocialLink}
-                  >
-                    <FaInstagram className={styles.authorSocialIcon} />
-                  </a>
-                  <a
-                    href={AUTHOR.website}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Website"
-                    className={styles.authorSocialLink}
-                  >
-                    <FaLink className={styles.authorSocialIcon} />
-                  </a>
-                </div>
-              </div>
+            <FadeIn direction="left" className={styles.authorTextBlock}>
+              <p className={styles.sectionLabel}>author</p>
+              <h2 className={styles.authorName}>{AUTHOR.name}</h2>
+              <p className={styles.authorBio}>{AUTHOR.bio}</p>
             </FadeIn>
-            <FadeIn direction="right">
+
+            <FadeIn direction="right" className={styles.authorImageBlock}>
               <div className={styles.authorImageWrapper}>
                 <div className={styles.authorBlobGrey1} />
                 <div className={styles.authorBlobGrey2} />
                 <Image
                   src="/assets/author.png"
                   alt={AUTHOR.name}
-                  width={260}
-                  height={320}
+                  fill
                   className={styles.authorImage}
                 />
               </div>
             </FadeIn>
+
+            <div className={styles.authorSocials}>
+              <a href={AUTHOR.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook" className={styles.authorSocialLink}>
+                <FaFacebook className={styles.authorSocialIcon} />
+              </a>
+              <a href={AUTHOR.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram" className={styles.authorSocialLink}>
+                <FaInstagram className={styles.authorSocialIcon} />
+              </a>
+              <a href={AUTHOR.website} target="_blank" rel="noopener noreferrer" aria-label="Website" className={styles.authorSocialLink}>
+                <FaLink className={styles.authorSocialIcon} />
+              </a>
+            </div>
           </div>
         </div>
       </section>
