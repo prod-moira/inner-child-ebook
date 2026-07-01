@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { EBOOK } from "@/lib/content";
 import styles from "./Navbar.module.css";
-import { User } from "lucide-react";
+import { FaUser } from "react-icons/fa";
 
 export default function Navbar() {
   const handleAuthorClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
@@ -28,7 +28,7 @@ export default function Navbar() {
           className={styles.cta}
           onClick={handleAuthorClick}
         >
-          <User/>
+          <FaUser />
         </Link>
       </div>
     </header>

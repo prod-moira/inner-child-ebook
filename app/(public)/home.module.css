@@ -336,8 +336,35 @@
   transition: filter 0.4s ease;
 }
 
-.authorImage:hover {
-  filter: grayscale(0%);
+.authorSocials {
+  display: flex;
+  align-items: flex-end;
+  gap: var(--space-sm);
+  margin-top: var(--space-md);
+}
+
+.authorSocialLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: var(--radius-full, 9999px);
+  border: 1px solid var(--color-border);
+  color: var(--color-text-muted);
+  background: var(--color-bg);
+  transition: background var(--transition-fast), color var(--transition-fast), border-color var(--transition-fast);
+}
+
+.authorSocialLink:hover {
+  background: var(--color-accent);
+  color: white;
+  border-color: var(--color-accent);
+}
+
+.authorSocialIcon {
+  width: 1.1rem;
+  height: 1.1rem;
 }
 
 .authorBlobGrey1 {

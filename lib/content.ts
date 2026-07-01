@@ -43,7 +43,10 @@ export const WHATS_INSIDE = [
 
 export const AUTHOR = {
   name: "Boggs Burbos",
-  bio: "Boggs 'Kuya Boggs' Burbos is a prominent Filipino Christian lay preacher, leadership coach, and motivational speaker. He is most widely recognized for his extensive leadership within The Feast, a global Catholic prayer community established by the Light of Jesus Family.",
+  bio: "Boggs 'Kuya Boggs' Burbos is a prominent Catholic lay preacher, leadership coach, and motivational speaker. He is most widely recognized for his extensive leadership within The Feast, a global prayer community established by the Light of Jesus Family.",
+  facebook: "https://facebook.com/boggsburbos",
+  instagram: "https://instagram.com/kuyaboggs",
+  website: "https://feast.ph/leader/boggs-burbos/?__cf_chl_f_tk=8FEMS7Ak.erIjz9.Ot7F369AlcQp2kpycl_e1BhowmE-1782900058-1.0.1.1-lA3oKLoAaEVEvmtyiBuE19IqyB_f54KfCG3XDpEwoHM",
 } as const;
 
 export const TESTIMONIALS = [
