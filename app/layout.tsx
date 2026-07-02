@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next"; // 1. Added Viewport type
 import { Roboto_Serif, Inter } from "next/font/google";
 import "./globals.css";
 
@@ -13,10 +13,16 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
+// 2. Export the viewport configuration here
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+};
+
 export const metadata: Metadata = {
     title: "My Kid Found my Inner Child — Ebook",
-    description:
-      "A gentle guide to reconnecting with your inner child and building lasting emotional healing.",
+    description: "A gentle guide to reconnecting with your inner child and building lasting emotional healing.",
     icons: {
       icon: "/favicon.png",
     },
@@ -46,7 +52,9 @@ export default function RootLayout({
       lang="en"
       className={`${robotoSerif.variable} ${inter.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col overflow-x-hidden">
+        {children}
+      </body>
     </html>
   );
 }
