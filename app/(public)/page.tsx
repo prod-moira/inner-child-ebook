@@ -25,7 +25,7 @@ export default function Home() {
           <div className={styles.heroBlobPink} />
           <div className={styles.heroBlobTeal} />
         <Image
-          src="/assets/finalcover.png"
+          src="/assets/bookcover.png"
           alt={EBOOK.title}
           width={280}
           height={400}
@@ -81,12 +81,15 @@ export default function Home() {
               <div className={styles.authorImageWrapper}>
                 <div className={styles.authorBlobGrey1} />
                 <div className={styles.authorBlobGrey2} />
-                <Image
-                  src="/assets/author.png"
-                  alt={AUTHOR.name}
-                  fill
-                  className={styles.authorImage}
-                />
+                <div className="relative w-full h-full"> {/* Ensure parent has relative position! */}
+                  <Image
+                    src="/assets/author.png"
+                    alt="Author Boggs B. Burbos"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" // <-- ADD THIS LINE
+                  />
+                </div>
               </div>
             </FadeIn>
 
