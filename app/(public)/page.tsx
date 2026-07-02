@@ -5,7 +5,7 @@ import FaqAccordion from "@/components/FaqAccordion";
 import OrderSuccessModal from "@/components/OrderSuccessModal";
 import Image from "next/image";
 import FadeIn from "@/components/FadeIn";
-import { FaFacebook, FaInstagram, FaLink } from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaLinkedin, FaLink } from "react-icons/fa";
 import {
   EBOOK,
   WHATS_INSIDE,
@@ -96,6 +96,9 @@ export default function Home() {
               </a>
               <a href={AUTHOR.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram" className={styles.authorSocialLink}>
                 <FaInstagram className={styles.authorSocialIcon} />
+              </a>
+              <a href={AUTHOR.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className={styles.authorSocialLink}>
+                <FaLinkedin className={styles.authorSocialIcon} />
               </a>
               <a href={AUTHOR.website} target="_blank" rel="noopener noreferrer" aria-label="Website" className={styles.authorSocialLink}>
                 <FaLink className={styles.authorSocialIcon} />
