@@ -24,7 +24,7 @@ export default function Navbar() {
           mkfmic
         </Link>
         <Link
-          href="#author"
+          href="/#author"
           className={styles.cta}
           onClick={handleAuthorClick}
         >
