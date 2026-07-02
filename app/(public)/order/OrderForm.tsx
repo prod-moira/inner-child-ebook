@@ -12,6 +12,7 @@ import {
   type CustomerDetails,
 } from "@/lib/validation";
 import { EBOOK } from "@/lib/content";
+import FadeIn from "@/components/FadeIn";
 
 type FormErrors = Partial<Record<keyof CustomerDetails | "receipt", string>>;
 
@@ -114,10 +115,10 @@ export default function OrderForm() {
     <div className={styles.page}>
       <div className={styles.container}>
         <header className={styles.header}>
-          <h1 className={styles.title}>For the child within</h1>
-          <p className={styles.subtitle}>
-            Your copy will be ready to download after checkout.
-          </p>
+            <h1 className={styles.title}>For the child within</h1>
+            <p className={styles.subtitle}>
+              Your copy will be ready to download after checkout.
+            </p>
         </header>
 
         <div className={styles.steps}>
@@ -145,7 +146,7 @@ export default function OrderForm() {
         </div>
 
         {step === 1 ? (
-          <div className={styles.formCard}>
+          <div className={styles.formCard} key={1}>
             <form onSubmit={handleDetailsSubmit} noValidate>
               <div className={styles.formGroup}>
                 <label htmlFor="fullName" className={styles.label}>
@@ -215,7 +216,7 @@ export default function OrderForm() {
             </form>
           </div>
         ) : (
-          <div className={styles.formCard}>
+          <div className={styles.formCard} key={2}>
             <form onSubmit={handlePlaceOrder} noValidate>
               <div className={styles.paymentSection}>
                 <div className={styles.qrWrapper}>
@@ -276,9 +277,11 @@ export default function OrderForm() {
           </div>
         )}
 
+        <FadeIn direction="up" delay={100}>
         <Link href="/" className={styles.backLink}>
           ← Back to home
         </Link>
+        </FadeIn>
       </div>
     </div>
   );
