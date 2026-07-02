@@ -1,6 +1,6 @@
 import { z } from "zod";
 
-export const GCASH_NUMBER = "09171234567";
+export const GCASH_NUMBER = "0956 249 5090";
 
 export const customerDetailsSchema = z.object({
   fullName: z

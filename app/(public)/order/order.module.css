@@ -211,7 +211,7 @@
 
 .qrWrapper {
   display: inline-block;
-  padding: var(--space-lg);
+  padding: var(--space-sm);
   background: var(--color-bg);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
@@ -220,8 +220,8 @@
 
 .qrImage {
   display: block;
-  width: 12rem;
-  height: 12rem;
+  width: 20rem;
+  height: 20rem;
   object-fit: contain;
 }
 
@@ -335,8 +335,8 @@
   }
 
   .qrImage {
-    width: 9rem;
-    height: 9rem;
+    width: 20rem;
+    height: 20rem;
   }
 
   .gcashLabel {

@@ -35,7 +35,7 @@ export default function OrderSuccessModal() {
           Order placed successfully!
         </h2>
         <p className={styles.modalText}>
-          Once your payment is verified, your copy will be sent to your email.
+          Once your payment has been verified, your copy will be sent to your email. Please allow up to <b>12 hours</b> for verification.
         </p>
         <button type="button" className={styles.modalClose} onClick={handleClose}>
           Got it

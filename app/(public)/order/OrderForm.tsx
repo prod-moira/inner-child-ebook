@@ -202,7 +202,7 @@ export default function OrderForm() {
                   }
                   value={customerDetails.gcashNumber}
                   onChange={handleDetailsChange}
-                  placeholder="09171234567"
+                  placeholder="09123456789"
                   maxLength={11}
                 />
                 {errors.gcashNumber && (
@@ -221,18 +221,17 @@ export default function OrderForm() {
               <div className={styles.paymentSection}>
                 <div className={styles.qrWrapper}>
                   <Image
-                    src="/gcash-qr.svg"
+                    src="/assets/qrcode.jpg"
                     alt="GCash QR code placeholder"
-                    width={192}
-                    height={192}
+                    width={200}
+                    height={200}
                     className={styles.qrImage}
                   />
                 </div>
                 <p className={styles.gcashNumber}>{GCASH_NUMBER}</p>
                 <p className={styles.gcashLabel}>
                   Send {EBOOK.currency}
-                  {EBOOK.price} to this GCash number, then upload your receipt
-                  below.
+                  {EBOOK.price} to <b>AR**L B</b>, then upload your receipt below.
                 </p>
               </div>
 

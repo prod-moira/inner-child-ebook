@@ -3,7 +3,7 @@ export const EBOOK = {
   tagline: "Heal your past, nurture their future.",
   valueProposition:
     "Learn practical tools to heal old wounds, nurture self-compassion, and build a kinder relationship with yourself.",
-  price: 499,
+  price: 250,
   currency: "₱",
   copyright: `© ${new Date().getFullYear()} Healing Your Inner Child. All rights reserved.`,
 } as const;
@@ -69,7 +69,7 @@ export const TESTIMONIALS = [
 
 export const PRICING_INCLUDES = [
   "Full ebook in PDF & EPUB formats",
-  "Instant access after purchase",
+  "Complete access after purchase",
   "Read on phones, tablets, e-readers, and computers",
 ] as const;
 
@@ -77,21 +77,21 @@ export const FAQ_ITEMS = [
   {
     question: "What payment methods do you accept?",
     answer:
-      "We currently accept GCash payments. After filling out the order form, you'll receive payment instructions and can upload your receipt for verification.",
+      "We currently accept GCash/Bank Transfer payments. After filling out the order form, you'll receive payment instructions and can upload your receipt for verification.",
   },
   {
     question: "How will I receive the ebook?",
     answer:
-      "Once your payment is confirmed, we'll email you a download link for the PDF and any bonus materials within 24 hours.",
+      "Once your payment is confirmed, we'll email you a download link for the PDF and EPUB copies within 24 hours.",
   },
   {
     question: "How long does order approval take?",
     answer:
-      "Orders are typically reviewed within 1–2 business days. You'll receive an email once your payment has been verified.",
+      "Orders are typically reviewed within 12-24 hours. You'll receive an email once your payment has been verified.",
   },
   {
     question: "Can I read this on my phone or tablet?",
     answer:
-      "Yes. The ebook is delivered as a PDF that works on any device — phone, tablet, e-reader, or computer.",
+      "Yes. The ebook is delivered as a PDF/EPUB that works on any device — phone, tablet, e-reader, or computer.",
   },
 ] as const;
