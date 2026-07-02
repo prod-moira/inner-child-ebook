@@ -14,20 +14,23 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "My Kid Found my Inner Child — Ebook",
-  description:
-    "A gentle guide to reconnecting with your inner child and building lasting emotional healing.",
-  icons: {
-    icon: "/favicon.png",
-  },
-  openGraph: {
+    title: "My Kid Found my Inner Child — Ebook",
+    description:
+      "A gentle guide to reconnecting with your inner child and building lasting emotional healing.",
+    icons: {
+      icon: "/favicon.png",
+    },
+    openGraph: {
     title: "My Kid Found my Inner Child",
     description: "A gentle guide to reconnecting with your inner child and building lasting emotional healing.",
+    type: "website",
+    url: "https://mkfmic.vercel.app",
     images: [
       {
-        url: "/assets/finalcover.png",
-        width: 280,
-        height: 400,
+        url: "https://mkfmic.vercel.app/assets/opengraphimg.png",
+        width: 1200,
+        height: 630,
+        alt: "My Kid Found my Inner Child — Ebook",
       },
     ],
   },
